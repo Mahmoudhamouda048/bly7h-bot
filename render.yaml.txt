@@ -1,0 +1,23 @@
+services:
+  - type: worker
+    name: bly7h-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bly7h_telegram_bot.py
+    envVars:
+      - key: BLY7H_MASTAR
+        sync: false
+      - key: BLY7H_MASTAR_SECRET
+        sync: false
+      - key: BLY7H_MASTAR_PASSPHRASE
+        sync: false
+      - key: BLY7H_FOLLIWER
+        sync: false
+      - key: BLY7H_FOLLIWER_SECRET
+        sync: false
+      - key: BLY7H_FOLLIWER_PASSPHRASE
+        sync: false
+      - key: COPY_RATIO
+        value: 2
+      - key: TELEGRAM_TOKEN
+        sync: false
